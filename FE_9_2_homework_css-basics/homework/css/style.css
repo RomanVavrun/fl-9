@@ -1,5 +1,107 @@
-/* 
+/* task 1 print wersion */
 
-write your code here
+@media print {
+    /* page setings */
+    @page {
+        margin-top: 1.5cm;
+    }
+    body {
+        background: transparent;
+        padding-top: 0;
+    }
+    /* only first section print */
+    .tm-sidebar,
+    #about,
+    section:not(:first-of-type) {
+        display: none;
+    }
+    .tm-main-content {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .tm-banner {
+        height: 200px;
+        padding: unset;
+    }
+    .pad {
+        padding: 0 0 0 20px;
+    }
+    h2.tm-section-title {
+        color: blue;
+    }
+    .flex-2-col {
+        display: block;
+    }
+    .tm-team-description-container {
+        max-width: none;
+    }
+    .flex-item:last-child {
+        text-align: center;
+    }
+}
 
-*/
+/* task 2 galary block */
+
+#about img {
+    border-radius: 50%;
+}
+
+/* task 2 hover efect */
+
+#about li:hover {
+    background-color: #2aabd2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* task 3  each leter in paragraf big */
+
+p:not(.text-xs-center):first-letter {
+    color: #76cdd7;
+    font-size: 30px;
+}
+
+/* task 4 add box shadow */
+
+.tm-sidebar,
+.tm-content-box {
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* task 5  */
+
+.tm-content-box {
+    position: relative;
+}
+
+.tm-content-box:not(:empty)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 26px solid #2aabd2;
+    border-right: 130px solid transparent;
+    z-index: 1;
+}
+
+/* task 6 */
+
+.carousel-item .tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+/* task 7 italic font style */
+
+h2+p {
+    font-style: italic;
+}
+
+/* task 8 */
+
+p:not(.tm-banner-text) {
+    /* отступ */
+}
