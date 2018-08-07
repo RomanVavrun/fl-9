@@ -1,0 +1,208 @@
+// body normalaizer
+body {
+    padding: $p_0;
+    margin: $m_0;
+}
+
+// wrapper setings
+.main-wrapper {
+    // $main_padding - 0 10% 0 10%;
+    padding: $main_padding;
+    background-color: $main_bg_color;
+    // $font_f_sans_s - snas-serif;
+    font-family: $font_f_sans_s;
+}
+// header section styles
+header {
+    // $d-f - flex;
+    display: $d-f;
+    flex-wrap: wrap;
+    justify-content: $s_between;
+}
+
+// main logo
+.logo img {
+    // logo_h - 260px
+    // logo_w - 500px
+    height: $logo_h;
+    width: $logo_w;
+}
+
+// nav menu
+nav {
+    flex-grow: 2;
+    display: $d-f;
+    // $border_h - 2px; 
+    // $border_t_s - solid;
+    // $nav_b_color - black;
+    border-top: $border_h $border_t_s $nav_b_color;
+    border-bottom: $border_h $border_t_s $nav_b_color;
+    // $s_around - space-around;
+    justify-content: $s_around;
+    margin-top: auto;
+    margin-bottom: 25px;
+     // nav items
+    a {
+        // $nav_font_size - xx-large;
+        font-size: $nav_font_size;
+        text-transform: uppercase;
+        text-decoration: none;
+        // $nav_line_h - 3;
+        line-height: $nav_line_h; 
+        // $link-color - #b0e1f4;
+        color: $link-color;
+        // hover efects
+        &:hover {
+            // $l_h_c - orange;
+            color: $l_h_c;
+        }
+        &:active {
+            //  l_h_a - red;
+            color: $l_h_a;
+        }
+    }
+}
+// search menu
+.toolbar {
+    // $d_b - block;
+    display: $d_b;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    input {
+        position: absolute;
+        font-weight: bold;
+        height: 40px;
+        width: 250px;
+        right: 0;
+        bottom: 20%;
+        padding-left: 1%; 
+        border: 1px solid $search_c;
+        background-color: $main_bg_color;
+        &::placeholder {
+            color: $search_c;
+        }
+    }
+}
+// post-list
+#list {
+    display: $d_f;
+    justify-content: $s_between;
+    // vertical  align
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    article {
+        width: 46%;
+        margin: 1% 0;
+        padding: 1%;
+        background: $art_bg_c;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .post-description {
+            color: $post_d_c;
+            font-size: 14px;
+        }
+
+        h3 {
+            color: $h3_c;
+            margin-top: 0.5em;
+            padding-top: 0.5em;
+            margin-bottom: 0.2em;
+            border-top: 1px solid $h3_b_c;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: $text_color;
+            margin-top: 0;
+            margin-bottom: 1.3em;
+            font-size: $text_font_s;
+            line-height: $text_l_h;
+        }
+    }
+}
+// about section
+#about {
+    h1 {
+        text-align: right;
+        vertical-align: text-bottom;
+        margin-top: 3em;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color: $about_h1_c;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 1.3em;
+        color: $text_color;
+        font-size: $text_font_s;
+        line-height: $text_l_h;
+    }
+    img {
+        width: 100%;
+    }
+}
+// contact section
+#contact {
+     h1,h4 {
+         text-align: right;
+         vertical-align: text-bottom;
+         margin-top: 3em;
+         margin-bottom: 0; 
+         text-transform: uppercase;
+         color: $about_h1_c;
+     }
+     h4 {
+         margin: 0;
+     }
+} 
+// form
+form {
+    display: $d-f;
+    flex-direction: column;
+    margin: 1% 0;
+    input {
+       margin: $form_m;
+       height: $form_h;
+       padding-left: 1.5%;
+       border: 1px solid $form_b_c;
+       color: $form_t_c;
+       font-weight: bold;
+       background-color: $main_bg_color;
+    }
+    textarea {
+        padding: 1% 1.5%;
+        margin: 0.5%;
+        font-family: $font_f_sans_s;
+        border: 1px solid $form_b_c;
+        color: $form_t_c;
+        font-weight: bold;
+        background-color: $main_bg_color;
+    }
+    button {
+        width: 20%;
+        font-weight: bold;
+        margin: 1% 0.5% 1% auto;
+        height: $form_h;
+        color: white;
+        background-color: $button_c;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        &:hover {
+            background-color: lighten($button_c, 15%);
+        }
+        &:active {
+            background-color: darken($button_c, 10%);
+        }
+    }
+}
+// footer
+footer {
+    color: $footer_c;
+}

@@ -1,0 +1,48 @@
+// main wrapper 
+$main_padding: 0 10% 0 10%;
+$main_bg_color: white;
+$p_0: 0;
+$m_0: 0;
+// logo
+$logo_h: 260px;
+$logo_w: 500px;
+// nav menu
+$nav_font_size: xx-large;
+$font_f_sans_s: sans-serif;
+$nav_line_h: 2.5;
+// flex
+$d-f: flex;
+$s_between: space-between;
+$s_around: space-around;
+// borders
+$border_h: 2px;
+$border_t_s: solid;
+$nav_b_color: #617d8a;
+// links
+$link-color: #b0e1f4;
+$l_h_c: orange;
+$l_h_a: red;
+// position
+$d_b: block;
+// search
+$search_c: #1fbcd3;
+// lists
+$art_bg_c: #efefef;
+// description & all headers
+$post_d_c: #159587;
+$h3_c: #1697a6;
+$h3_b_c: #617d8a;
+$about_h1_c: #1fbcd3;
+//posts p & text color
+$text_color: #617d8a;
+$text_font_s: 14px;
+$text_l_h: 1.7;
+// form
+$form_h: 40px;
+$form_m: 0.5em;
+$form_b_c: #617d8a;
+$form_t_c: #757575;
+// button
+$button_c: #1fbcd3;
+// footer
+$footer_c: #617d91;
