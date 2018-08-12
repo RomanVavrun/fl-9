@@ -81,27 +81,25 @@ body {
 }
 
 /* Header big text in  center  */
-
-/* .big_text {
-     
-} */
-
 .big_text h1 {
     font-size: 48px;
     letter-spacing: 0.3em;
     margin: 10% 0 0 0;
     padding-left: 30%;
+    cursor: pointer;
 }
 
 .big_text p {
     margin: 0;
     padding-left: 43%;
+    cursor: pointer;
 }
 
 .ampersant {
     font-size: 2.2em;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 
 .show_more_button {
@@ -193,6 +191,17 @@ body {
     color: white;
 }
 
+.likes:hover {
+        border: 3px solid black;
+        background: white;
+        color: black;
+        cursor: pointer;
+}.likes:active {
+        color: red;
+}
+
+
+
 .photo_name {
     position: absolute;
     left: 15px;
@@ -200,6 +209,11 @@ body {
     color: white;
 }
 
+.photo_name:hover {
+    background-color: white;
+    color: black;
+}
+ 
 .item_text {
     flex-grow: 1;
     display: flex;
@@ -231,6 +245,7 @@ body {
     border: 2px solid black;
     padding: 0 0 0 1%;
     margin: 0 auto;
+    background-color: #f3f3f3;
 }
 
 .subscribe_form {
@@ -262,6 +277,18 @@ body {
     color: white;
 }
 
+.subsribe_btn:hover {
+    background-color: silver;
+    border-color: silver;
+    color: royalblue;
+}
+
+.subsribe_btn:active {
+    color: red;
+    background-color: rgb(158, 158, 158);
+    border-color: rgb(158, 158, 158);
+}
+
 .newsletter .subsribe_btn {
 width: 25%;
 }
@@ -282,6 +309,16 @@ br {
     margin: 0 1%;
 }
 
+.footer_wrapper p {
+    color: #A4A4A4;
+}
+
+.footer_last_tweet::after {
+    content: "3 hours ago";
+    font-size: 12px;
+    color: #B7C8D9;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -294,4 +331,19 @@ br {
     justify-content: space-around;
     width: 27%;
     margin: 0;
+    cursor: pointer;
+}
+
+.footer ul li:hover {
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}
+
+.footer ul li:active {
+    color: red;
+}
+
+.footer span {
+    color: #A4A4A4
 }
