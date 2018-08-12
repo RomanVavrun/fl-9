@@ -1,0 +1,155 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+
+:root {
+    --bg-color--dark: #0a1223;
+    --bg-color--light: #fff;
+    --link: #5d5d5d;
+    --link--active: #54597d;
+    --link--hover: #54597d;
+    --article-title: #ddd;
+    --article-title--dark: #000;
+    --thumbnail--description: #5d5d5d;
+    /* These styles are needed only for media query max-width: 575px */
+    /* The 'Up' button (circle button at right bottom corner) */
+    --btn-color: #fff;
+    --btn-bg-color: #5ebcff;
+    --navigation-border-bottom: #ddd;
+    --thumbnail-title: #484747;
+}
+
+/* Your styles go here */
+
+/* gradient */
+
+/* background: linear-gradient(to right, var(--article-title), var(--thumbnail--description));
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text; */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* global wrapper */
+
+.globla_wrapper {
+    font-family: sans-serif;
+}
+
+/* nav menu */
+
+.nav_menu {
+    list-style-type: none;
+    color: #5d5d5d;
+    margin: 0;
+    padding: 0;
+}
+
+/*nav_menu li a -items */
+
+.nav_link {
+    display: block;
+    font-size: 2em;
+    height: 40px;
+    text-decoration: none;
+    color: #5d5d5d;
+    border-bottom: 1px solid #ddd;
+    padding: 2% 3%;
+}
+
+/* link hover efects */
+.nav_link:hover {
+    color: #54597d;
+}
+
+.nav_link:active {
+    color: red;
+}
+
+/* active page */
+
+.active {
+    color: #54597a;
+    font-weight: bold;
+}
+
+/*  */
+
+.h1 {
+    font-size: 72px;
+    text-align: center;
+    margin: 2em 1em 2em 1em;
+}
+
+/* main wrapper */
+
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15em;
+}
+
+.post_wrapper {
+    padding: 0 12%;
+}
+
+.text_wrapper {
+    font-family: sans-serif;
+}
+
+.post_name {
+    font-size: 52px;
+    color: #484747;
+}
+
+.post_description {
+    font-size: 30px;
+    color: #5d5d5d;
+    text-indent: 1em;
+    text-align: justify;
+}
+
+.post_wrapper img {
+    height: 20%;
+    width: 100%;
+}
+
+.to_top_btn {
+    display: block;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    height: 100px;
+    width: 100px;
+    background-color: #73bcf9;
+    border-radius: 50%;
+}
+
+.to_top_btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.to_top_btn a:hover {
+     background-color: #3ca0f1;
+}
+
+.to_top_btn a:active {
+    background-color: #96ccf8;
+    color: red;
+}
