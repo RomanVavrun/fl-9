@@ -1,0 +1,297 @@
+/* unset */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* main wrapper */
+
+.main_wrapper {
+    min-width: 900px;
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+}
+
+/* header */
+
+.header {
+    height: 740px;
+    background: #6f6f6f url("../img/apples.jpg") center center no-repeat;
+    object-fit: cover;
+    color: white;
+    margin: 0;
+}
+
+.header_wrapper {
+    padding: 3% 3% 1% 3%;
+    height: 680px;
+}
+
+/* left side header text */
+
+.we {
+    letter-spacing: 0.3em;
+    padding-top: 1%;
+    cursor: pointer;
+}
+
+.we:hover {
+    color: black;
+    background-color: white;
+    border-radius: 10%;
+}
+
+.we:active {
+    color: red;
+}
+
+/* nav menu */
+
+.nav {
+    display: flex;
+}
+
+.nav_menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 30%;
+}
+
+/* nav items */
+
+.nav_menu li {
+    margin: 0 3%;
+    padding: 1% 1%;
+    cursor: pointer;
+}
+
+.nav_menu li:hover {
+    background-color: white;
+    color: black;
+    border-radius: 10%;
+}
+
+.nav_menu li:active {
+    color: red;
+}
+
+/* Header big text in  center  */
+
+/* .big_text {
+     
+} */
+
+.big_text h1 {
+    font-size: 48px;
+    letter-spacing: 0.3em;
+    margin: 10% 0 0 0;
+    padding-left: 30%;
+}
+
+.big_text p {
+    margin: 0;
+    padding-left: 43%;
+}
+
+.ampersant {
+    font-size: 2.2em;
+    padding: 0;
+    margin: 0;
+}
+
+.show_more_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 296px;
+    height: 60px;
+    color: white;
+    border: 2px solid white;
+    margin: 0 auto;
+    margin-top: 11%;
+    text-decoration: none;
+}
+
+.show_more_button:hover {
+    background-color: white;
+    color: black;
+}
+
+.show_more_button:active {
+    color: red;
+    background-color: rgb(224, 224, 224);
+}
+
+.text_section {
+    display: flex;
+    align-items: center;
+    height: 435px;
+    padding: 0 3% 0 3%;
+}
+
+.left_side,
+.right_side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-right: 4.5%;
+}
+
+.left_side {
+    font-size: 1.7em;
+}
+
+.main {
+    background-color: #f3f3f3;
+    padding: 3% 3% 3% 3%;
+}
+
+.main h2 {
+    font-weight: normal;
+    text-align: center;
+    margin-top: 6em;
+    margin-bottom: 4em;
+}
+
+/* main */
+
+/* .content_wrapper {} */
+
+.content_item_2,
+.content_item_1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1% 0;
+}
+
+.content_item_2 {
+    flex-direction: row-reverse;
+}
+
+.image {
+    position: relative;
+    height: 300px;
+    width: 770px;
+}
+
+.likes {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    top: 15px;
+    width: 70px;
+    height: 35px;
+    border: 3px solid white;
+    background: #676565;
+    color: white;
+}
+
+.photo_name {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: white;
+}
+
+.item_text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* form */
+
+.subscribe {
+    background-color: white;
+    padding: 2% 1%;
+}
+
+/* lable text  */
+
+.subscribe label {
+    font-size: 36px;
+    margin: 0 1%;
+}
+
+/* wrapper */
+
+/* email input */
+#main_subscribe_email_footer,
+#main_subscribe_email {
+    height: 36px;
+    width: 50%;
+    border: 2px solid black;
+    padding: 0 0 0 1%;
+    margin: 0 auto;
+}
+
+.subscribe_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.email_input {
+    flex-grow: 3;
+}
+
+#main_subscribe_email {
+    width: 80%;
+    
+}
+
+#main_subscribe_email_footer {
+    width: 60%;
+}
+.subsribe_btn {
+    height: 40px;
+    width: 19%;
+    padding: 0;
+    margin-left: -10px;
+    background-color: #343638;
+    border: 2px solid #343638;
+    color: white;
+}
+
+.newsletter .subsribe_btn {
+width: 25%;
+}
+/* footer */
+
+br {
+    color: #f0f0f0;
+}
+
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 3% 1% 3%;
+    /* color: #ab9e9e; */
+}
+
+.footer_wrapper div {
+    margin: 0 1%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 3% 1% 3%;
+}
+
+.footer ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 27%;
+    margin: 0;
+}
