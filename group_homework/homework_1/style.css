@@ -1,0 +1,169 @@
+/* обгортка */
+
+.global_wrapper {
+    height: 415px;
+    width: 315px;
+    box-shadow: 10px 10px 45px -10px rgba(0, 0, 0, 0.75);
+    border-radius: 10%;
+    margin: 10% auto;
+}
+
+/* обгортка верхньої частини */
+
+.top_img {
+    position: relative;
+    height: 250px;
+    background-color: #58cdbd;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+}
+
+/* ліва частина землі від телеграма */
+
+.ground_left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 54px;
+    width: 252px;
+    background-image: url("/files/ground_left.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* права частина землі від телеграма */
+
+.ground_right {
+    position: absolute;
+    bottom: -5px;
+    right: 2px;
+    height: 30px;
+    width: 32px;
+    background-image: url("/files/ground_rigth.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* центральна частина гори */
+
+.mouten_center {
+    position: absolute;
+    bottom: 24px;
+    left: 85px;
+    height: 104px;
+    width: 116px;
+    background-image: url("/files/mouten_center.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* верхушка гори */
+
+.mouten_head {
+    position: absolute;
+    bottom: 79px;
+    left: 110px;
+    height: 99px;
+    width: 55px;
+    background-image: url("/files/mouten_head.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* гора що позаду */
+
+.mouten_bg {
+    position: absolute;
+    bottom: 28px;
+    right: 80px;
+    height: 86px;
+    width: 50px;
+    background-image: url("/files/mouten_bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* нижня частина */
+
+.bottom {
+    position: relative;
+    height: 166px;
+}
+
+/* кнопка з мішкою */
+
+.bear_img {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    height: 35px;
+    width: 35px;
+    border-radius: 30%;
+    background-color: #58cdbd;
+    background-image: url("/files/bear.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* типу текст */
+
+.some_text {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    width: 190px;
+    height: 55px;
+    background-color: #bbbbbb;
+    background-image: url("/files/some_text.png");
+}
+
+/* білий блок що перекриває текст (здається непотрібний по встави зображення з вирізом) */
+
+.white_block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 90px;
+    background-color: white;
+}
+
+/* загальні стилі кнопок */
+
+.btn_1,
+.btn_2 {
+    position: absolute;
+    bottom: 35px;
+    height: 10px;
+    width: 35px;
+    border-radius: 15px;
+    background-color: #a3dab7;
+}
+
+/* окремі стилі для кнопки 1 */
+
+.btn_1 {
+    right: 85px;
+}
+
+/* окремі стилі для кнопки 2 */
+
+.btn_2 {
+    right: 40px;
+}
+
+/* кнопку яку тре анімувати */
+
+.btn_animated {
+    position: absolute;
+    cursor: pointer;
+    top: -28px;
+    right: 27px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fdb734;
+    background-image: url("/files/telegram.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
