@@ -3,7 +3,7 @@
  * Feel free to add new colors if you need it
  */
 
-:root {
+/* :root {
     --bg-color--dark: #0a1223;
     --bg-color--light: #fff;
     --link: #5d5d5d;
@@ -13,12 +13,12 @@
     --article-title--dark: #000;
     --thumbnail--description: #5d5d5d;
     /* These styles are needed only for media query max-width: 575px */
-    /* The 'Up' button (circle button at right bottom corner) */
+    /* The 'Up' button (circle button at right bottom corner) 
     --btn-color: #fff;
     --btn-bg-color: #5ebcff;
     --navigation-border-bottom: #ddd;
     --thumbnail-title: #484747;
-}
+} 
 
 /* Your styles go here */
 
@@ -28,6 +28,8 @@
 -webkit-text-fill-color: transparent;
 -webkit-background-clip: text; */
 
+/* general styles or mobile first styles */
+
 html,
 body {
     padding: 0;
@@ -36,120 +38,259 @@ body {
 
 /* global wrapper */
 
-.globla_wrapper {
-    font-family: sans-serif;
+@media screen and (max-width: 600px) {
+    .globla_wrapper {
+        font-family: sans-serif;
+    }
+    /* nav menu */
+    .nav_menu {
+        list-style-type: none;
+        color: #5d5d5d;
+        margin: 0;
+        padding: 0;
+    }
+    /*nav_menu li a -items */
+    .nav_link {
+        display: block;
+        font-size: 2em;
+        height: 40px;
+        text-decoration: none;
+        color: #5d5d5d;
+        border-bottom: 1px solid #ddd;
+        padding: 2% 3%;
+    }
+    /* link hover efects */
+    .nav_link:hover {
+        color: #54597d;
+    }
+    .nav_link:active {
+        color: red;
+    }
+    /* active page */
+    .active {
+        color: #54597a;
+        font-weight: bold;
+    }
+    .h1 {
+        font-size: 72px;
+        text-align: center;
+        margin: 2em 1em 2em 1em;
+    }
+    /* main wrapper */
+    .main_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15em;
+    }
+    .post_wrapper {
+        padding: 0 12%;
+    }
+    .text_wrapper {
+        font-family: sans-serif;
+    }
+    .post_name {
+        font-size: 52px;
+        color: #484747;
+    }
+    .post_description {
+        font-size: 30px;
+        color: #5d5d5d;
+        text-indent: 1em;
+        text-align: justify;
+    }
+    .post_wrapper img {
+        height: 20%;
+        width: 100%;
+    }
+    .to_top_btn {
+        display: block;
+        position: fixed;
+        bottom: 2em;
+        right: 2em;
+        height: 100px;
+        width: 100px;
+        background-color: #5ebcff;
+        border-radius: 50%;
+        box-shadow: 10px 10px 20px lightgray;
+    }
+    .to_top_btn a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        color: #fff;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .to_top_btn a:hover {
+        background-color: #3ca0f1;
+    }
+    .to_top_btn a:active {
+        background-color: #96ccf8;
+        color: red;
+    }
 }
 
-/* nav menu */
+/* medium screen size style */
 
-.nav_menu {
-    list-style-type: none;
-    color: #5d5d5d;
-    margin: 0;
-    padding: 0;
+@media screen and (min-width: 601px) {
+    body {
+        background-color: #0a1223;
+    }
+    /* global wrapper */
+    .globla_wrapper {
+        font-family: sans-serif;
+    }
+    /* display: none; dose not work why??? */
+    .to_top_btn,
+    .to_top_btn a {
+        left: -100%;
+    }
+    /* nav menu */
+    .nav_menu {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 5% 0;
+    }
+    /*nav_menu li a -items */
+    .nav_link {
+        display: block;
+        font-size: 2em;
+        width: 7em;
+        text-decoration: none;
+        color: #5d5d5d;
+        margin: 0 25%;
+    }
+    /* link hover efects */
+    .nav_link:hover {
+        color: #54597d;
+    }
+    .nav_link:active {
+        color: red;
+    }
+    /* active page */
+    .active {
+        color: #54597a;
+    }
+    .h1 {
+        font-size: 72px;
+        text-align: center;
+        color: #dddddd;
+        margin: 3em 1em 2em 1em;
+    }
+    /* main wrapper */
+    .main_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 17em 0;
+    }
+    .post_wrapper {
+        padding: 0 12%;
+    }
+    .text_wrapper {
+        font-family: sans-serif;
+    }
+    .post_name {
+        font-size: 52px;
+        background: linear-gradient(to right, #ddd, #5d5d5d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .post_description {
+        font-size: 30px;
+        color: #5d5d5d;
+        text-indent: 1em;
+        text-align: justify;
+    }
+    .post_wrapper img {
+        height: 20%;
+        width: 100%;
+    }
+    .to_top_btn {
+        display: block;
+        position: fixed;
+        bottom: 2em;
+        right: 2em;
+        height: 100px;
+        width: 100px;
+        background-color: #5ebcff;
+        border-radius: 50%;
+    }
+    .to_top_btn a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        color: #fff;
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    .to_top_btn a:hover {
+        background-color: #3ca0f1;
+    }
+    .to_top_btn a:active {
+        background-color: #96ccf8;
+        color: red;
+    }
 }
 
-/*nav_menu li a -items */
-
-.nav_link {
-    display: block;
-    font-size: 2em;
-    height: 40px;
-    text-decoration: none;
-    color: #5d5d5d;
-    border-bottom: 1px solid #ddd;
-    padding: 2% 3%;
-}
-
-/* link hover efects */
-.nav_link:hover {
-    color: #54597d;
-}
-
-.nav_link:active {
-    color: red;
-}
-
-/* active page */
-
-.active {
-    color: #54597a;
-    font-weight: bold;
-}
-
-/*  */
-
-.h1 {
-    font-size: 72px;
-    text-align: center;
-    margin: 2em 1em 2em 1em;
-}
-
-/* main wrapper */
-
-.main_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 15em;
-}
-
-.post_wrapper {
-    padding: 0 12%;
-}
-
-.text_wrapper {
-    font-family: sans-serif;
-}
-
-.post_name {
-    font-size: 52px;
-    color: #484747;
-}
-
-.post_description {
-    font-size: 30px;
-    color: #5d5d5d;
-    text-indent: 1em;
-    text-align: justify;
-}
-
-.post_wrapper img {
-    height: 20%;
-    width: 100%;
-}
-
-.to_top_btn {
-    display: block;
-    position: fixed;
-    bottom: 2em;
-    right: 2em;
-    height: 100px;
-    width: 100px;
-    background-color: #73bcf9;
-    border-radius: 50%;
-}
-
-.to_top_btn a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-
-.to_top_btn a:hover {
-     background-color: #3ca0f1;
-}
-
-.to_top_btn a:active {
-    background-color: #96ccf8;
-    color: red;
+@media screen and (min-width: 1461px) {
+    body {
+        background-color: #0a1223;
+    }
+    /* global wrapper */
+    .globla_wrapper {
+        font-family: sans-serif;
+    }
+    /* display: none; dose not work why??? */
+    .to_top_btn,
+    .to_top_btn a {
+        left: -100%;
+    }
+    /* nav menu */
+    .nav_menu {
+        justify-content: flex-end;
+        padding: 2%
+    }
+    .nav_link {
+        font-size: 1em;
+    }
+    .h1 {
+        margin: 1em 0;
+    }
+    .main_wrapper {
+        margin: 1em 0;
+    }
+    .post_wrapper {
+        display: flex;
+        padding: 0 20%;
+        margin: 2em 0;
+    }
+    .post_wrapper:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .post_wrapper img {
+        height: 20%;
+        width: 48%;
+    }
+    .post_name {
+        font-size: 30px;
+    }
+    .post_description {
+        font-size: 18px;
+    }
 }
