@@ -1,31 +1,73 @@
-const max_num = 6;
-let attempts = 3;
-let step_3 = 1;
-const win_in_step_1 = 10;
-const win_in_step_2 = 5;
-const win_in_step_3 = 2;
-let prize = 0;
-let play = confirm('Do you want to play a game?');
+const gameInfoTemplate = (maxValue, attemptsLeft, totalPrize, currentPrize) => `
+Enter a number from 0 to ${maxValue}
+Attempts left: ${attemptsLeft}
+Total prize: ${totalPrize}$
+Possible prize on current attempt: ${currentPrize}$`;
 
-if (play === false) {
-    alert('You did not become a millionaire, but can.');
-} else {
-    for (; attempts !== 0; attempts--) {
-        let random_number = randomInt(0, max_num);
-        console.log(attempts, random_number, prize);
-        let user_num = prompt('Enter a number from 0 to 5', '')
-        if (user_num === random_number && attempts === 3) {
-            prize += win_in_step_1;
-        } else if (random_number === user_num && attempts === 2) {
-            prize += win_in_step_2;
-        } else if (random_number === user_num && attempts === step_3) {
-            prize += win_in_step_3;
+const config = {
+    prizeMultiplier: 3,
+    rangeMultiplier: 2,
+    totalAttempts: 3
+};
+
+// game rules shouldn't change during the game, so let's be safe and freeze config
+Object.freeze(config);
+
+const gameData = {
+    prize: 10,
+    maxRangeValue: 5,
+    totalPrize: 0
+};
+
+// flag, that determines, if user wants to continue
+let playAgain = false;
+
+confirm('Do you want to play a game?') ? playGame() : alert('You did not become a millionaire, but can.');
+
+function playGame() {
+    do {
+        // reset flag to the default value
+        playAgain = false;
+
+        const randomNumber = getRandomNumber(gameData.maxRangeValue);
+
+        for (
+            let currentAttempt = 1, currentPrize = gameData.prize;
+            currentAttempt <= config.totalAttempts;
+            currentAttempt++ , currentPrize = Math.floor(currentPrize / 2)
+        ) {
+            const userGuess = parseInt(prompt(
+                gameInfoTemplate(
+                    gameData.maxRangeValue,
+                    config.totalAttempts - currentAttempt,
+                    gameData.totalPrize,
+                    currentPrize
+                )
+            ));
+
+            if (!isNaN(userGuess) && userGuess === randomNumber) {
+                gameData.totalPrize += currentPrize;
+                if (confirm(`
+                    Congratulation! Your prize is: ${gameData.totalPrize}$ 
+                    Do you want to continue?`)
+                ) {
+                    // update prize and maxRange values after correct guess
+                    gameData.prize *= config.prizeMultiplier;
+                    gameData.maxRangeValue *= config.rangeMultiplier;
+
+                    playAgain = true;
+                    break;
+                }
+            } else if (isNaN(userGuess)) {
+                break; // user canceled guess input
+            } else if (currentAttempt === config.totalAttempts) {
+                alert(`Thank you for a game. Your prize is: ${gameData.totalPrize}$`);
+                playAgain = confirm('Do you want to play again?');
+            }
         }
-    }
-
-    alert(`Thank you for a game. Your prize is: ${prize} $`);
+    } while (playAgain);
 }
 
-    function randomInt(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
-    }
+function getRandomNumber(maxValue) {
+    return Math.floor(Math.random() * ++maxValue);
+}
