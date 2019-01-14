@@ -6,7 +6,6 @@
         margin-top: 70px;
     }
     body {
-        opacity: 0.5;
         padding-top: 0;
     }
     /* only first section print */
@@ -130,7 +129,19 @@
     }
     .submit-btn:hover {
         color: white;
-        background: #5cc7d3;
+        background: #00b8cc;
         opacity: 0.5;
+    }
+
+    .tm-banner-inner {
+        border: none;
+    }
+    .tm-banner-text::first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+    .pad h2 {
+        text-align: center;
+        color: #5cc7d3;
     }
 }
