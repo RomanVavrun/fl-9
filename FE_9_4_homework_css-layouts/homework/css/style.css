@@ -19,7 +19,7 @@ body {
 
 .header {
     height: 740px;
-    background: #6f6f6f url("../img/apples.jpg") center center no-repeat;
+    background: #6f6f6f url("img/apples.jpg") center center no-repeat;
     object-fit: cover;
     color: white;
     margin: 0;
