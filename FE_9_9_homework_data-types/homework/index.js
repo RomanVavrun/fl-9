@@ -14,7 +14,7 @@ function map(array, fun) {
     forEach(array, (el) => new_array.push(fun(el)))
     return new_array;
 }
-// tassk 4
+// task 4
 function filter(array, fun) {
     let new_array = [];
     forEach(array, (el) => {
