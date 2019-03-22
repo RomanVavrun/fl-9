@@ -7,6 +7,47 @@
   <title>Data types</title>
 </head>
 <body>
+  <pre>
+
+      TASK
+      Write all tasks inside index.js file
+      
+      1. Write function, which returns type of passed parameter.
+      
+      findType(‘number’) // returns “string” 
+      findType(null) // returns “object” 
+      
+      2. Write function, which iterates over array and executes function on each element.
+      
+      forEach([2,5,8], function(el) { console.log(el) }) // returns 2 5 8
+      
+      3. Write function, which returns transformed array based on function, which passed as a parameter. Reuse function from task 2.
+      
+      map([2, 5, 8], function(el) { return el + 3 }) // returns [5, 8, 11]
+      
+      4. Write function, which returns filtered array based on function, which passed as a parameter. Reuse function from task 2.
+      
+      filter([2, 5, 8], function(el) { return el > 3 }) // returns [5, 8]
+      
+      5. Write function, which returns array of names of people, who are over 18 and their favorite fruit is apple. Reuse functions from task 2 and 3.
+      
+      //See input data example in CODE section
+      getAdultAppleLovers(data) // returns [‘Stein’]
+      
+      6. Write function, which returns array of keys of an object.
+      
+      keys({keyOne: 1, keyTwo: 2, keyThree: 3}) // returns [“keyOne”, “keyTwo”, “keyThree”]
+      
+      7. Write function, which returns array of values of an object.
+      
+      values({keyOne: 1, keyTwo: 2, keyThree: 3}) // returns [1, 2, 3]
+      
+      8. Write function, which returns formatted date.
+      
+      showFormattedDate(new Date('2018-08-27T01:10:00')) // returns ‘It is 27 of Aug, 2018’
+      // every month should be showed as 3 letters (e.g. Feb, Apr or Dec)
+      
+  </pre>
   <script src="index.js"></script>
 </body>
 </html>
